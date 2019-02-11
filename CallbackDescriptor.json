@@ -1,0 +1,107 @@
+{
+	"displayName": "callback Test",
+	"type": "callback",
+	"logo": "callback1.png",
+	"logoSmall": "callback2.png",
+	"metadata": [{
+	"name": "project",
+      "dependent": false,
+      "values": [
+        {
+          "id": "Test",
+          "name": "Test",
+          "isRegex": false
+        }]},
+    {
+	"name": "issuetype",
+	"dependent": true,
+	"values": [
+	{
+		"id": "bug",
+		"name": "bug"
+	}]}],
+	"fields": [
+    {
+      "id": "id",
+      "name": "Id",
+      "datatype": "string"
+    },
+    {
+      "id": "summary",
+      "name": "Summary",
+      "datatype": "string"
+    },
+    {
+      "id": "status",
+      "name": "Status",
+      "datatype": "string",
+      "values": [
+        {
+          "id": "1",
+          "name": "TO DO",
+          "isRegex": false
+        },
+        {
+          "id": "2",
+          "name": "Open",
+          "isRegex": false
+        }
+      ]
+    },
+    {
+      "id": "description",
+      "name": "Description",
+      "datatype": "string"
+    }
+],
+	"loginOptions": [],
+	"idFieldName": "id",
+	"titleFieldName": "Summary",
+	"projectFieldName": "project",
+	"artifactFieldName": "issuetype",
+	"testStepsFieldName": "",
+	"changedDateFieldName": "modified",
+	"dateFormat": "dd-MM-yyyy",
+	"dateTimeFormat": "dd-MM-yyyy HH:mm:ss.SSS",
+	"isISO8601DateFormat": "false",
+	"commentFieldName": "Comment",
+	"commentFieldId": "discussedBy",
+	"attachmentFieldName": "Attachments",
+	"attachmentFieldId": "attachments",
+	"apiVersion": "2",
+	"callBackUrlConfigured": true,
+	"applicationType": "remote",
+	"callBackUrls": [
+		{
+			"method": "CONNECT",
+			"url": "/RESTfullApp/rest/hello/1/application/login"
+		}, {
+			"method": "DISCONNECT",
+			"url": "/RESTfullApp/rest/hello/1/application/logout"
+		}, {
+			"method": "VALIDATE_CONNECTION",
+			"url": "/RESTfullApp/rest/hello/1/application/isConnected"
+		},
+		{
+			"method": "SEARCH_RECORDS",
+			"url": "/RESTfullApp/rest/hello/1/application/record/find"
+		}, {
+			"method": "GET_RECORD",
+			"url": "/RESTfullApp/rest/hello/1/application/record/get"
+		}, {
+			"method": "CREATE_RECORD",
+			"url": "/RESTfullApp/rest/hello/1/application/record/create"
+		}, {
+			"method": "UPDATE_RECORD",
+			"url": "/RESTfullApp/rest/hello/1/application/record/update"
+		}, {
+			"method": "GET_COMMENTS",
+			"url": "/RESTfullApp/rest/hello/1/application/comment/get"
+		}, {
+			"method": "CREATE_COMMENT",
+			"url": "/RESTfullApp/rest/hello/1/application/comment/create"
+		}, {
+			"method": "UPDATE_COMMENT",
+			"url": "/RESTfullApp/rest/hello/1/application/comment/update"
+		}
+	]}

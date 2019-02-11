@@ -1,0 +1,1 @@
+curl -i -X POST -H "Content-Type:application/json" http://localhost:8080/RESTfullApp/rest/hello/1/get_record?apikey=abc -d '{"recordId":"99","inputParams": { "project": "Employee_Table", "issueType": "Basic Info" }}'
